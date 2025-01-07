@@ -1,0 +1,180 @@
+body {
+  background-color: #d0f3ff;
+  font-family: "rl-aqva", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.logo {
+  display: none;
+}
+
+/* FORSIDE 1 */
+
+@media (width < 600px) {
+  #forside {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/forsidemobil.svg");
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+  }
+  #tegning {
+    position: absolute;
+    width: 300px;
+    aspect-ratio: 1/1;
+    top: 70px;
+    left: 170px;
+    background-image: url("img/tegning.png");
+    background-size: cover;
+  }
+}
+/* Kun til forsiden */
+@media (width > 600px) {
+  #header {
+    display: none;
+  }
+}
+
+/* Computer størrelse */
+@media (width > 600px) {
+  #forside {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/forsidebaggrund.svg");
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    background-position: center 0;
+  }
+  #tegning {
+    width: 35%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: -0.5%;
+    left: 45%;
+    background-image: url("img/tegning.png");
+    background-size: cover;
+  }
+
+  #border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/border.svg");
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    background-position: center 0;
+  }
+
+  #portfolio {
+    position: absolute;
+    width: 20%;
+    height: 15%;
+    background-image: url("img/portfolio.svg");
+    background-repeat: no-repeat;
+    top: 0;
+    left: 25%;
+    background-position: center 0;
+  }
+
+  #portfolio:hover {
+    transform: translateY(5px);
+  }
+
+  #ommig {
+    position: absolute;
+    width: 20%;
+    height: 15%;
+    background-image: url("img/ommig.svg");
+    background-repeat: no-repeat;
+    top: 0;
+    left: 65%;
+    background-position: center 0;
+  }
+  #ommig:hover {
+    transform: translateY(5px);
+  }
+}
+
+header {
+  position: relative;
+  color: #ff5055;
+  height: 7vh;
+  width: 100%;
+  z-index: 1000;
+  transition: background 0.4s ease;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between; /* Space between logo and navigation */
+  align-items: center; /* Center items vertically */
+  padding: 10px 20px; /* Padding around the header content */
+}
+
+header nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.burger-menu {
+  display: none; /* Hide the burger menu by default */
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.header_nav ul {
+  display: flex;
+  gap: 10px; /* Space between navigation items */
+}
+
+.header_nav ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  padding: 10px 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 600px) {
+  .burger-menu {
+    display: block; /* Show the burger menu */
+  }
+
+  #burger-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .header_nav {
+    display: none; /* Hide the navigation by default */
+    position: absolute;
+    top: 6vh; /* Adjusted to appear below the header */
+    right: 2%;
+    background-color: #ff5055;
+    flex-direction: column;
+    width: 150px;
+    background-color: rgba(255, 80, 85, 0.7);
+  }
+
+  #burger-toggle:checked + .burger-menu + .header_nav {
+    display: flex; /* Show navigation when burger menu is toggled */
+  }
+
+  .header_nav ul {
+    flex-direction: column; /* Stack navigation items */
+
+    list-style: none;
+  }
+
+  .header_nav ul li a {
+    text-align: center; /* Center-align the text */
+    width: 100%; /* Full width for better usability */
+  }
+}

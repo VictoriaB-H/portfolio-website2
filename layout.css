@@ -1,0 +1,300 @@
+/* PORTFOLIO SITE */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-items: center;
+  padding: 100px;
+}
+
+.grid-item {
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column; /* Ensures the box and image stack vertically */
+  align-items: center; /* Centers the content */
+}
+
+.grid-item p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ff5555;
+  font-family: "rl-aqva", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.box {
+  width: 279px;
+  height: 257px;
+  background-color: #ccc;
+  background-image: url(img/tema1.webp);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0;
+  margin: 10px;
+}
+
+.box2 {
+  width: 279px;
+  height: 257px;
+  background-color: #ccc;
+  background-image: url(img/tema2.webp);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0;
+  margin: 10px;
+}
+.box3 {
+  width: 279px;
+  height: 257px;
+  background-color: #ccc;
+  background-image: url(img/tema3.webp);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0;
+  margin: 10px;
+}
+.box4 {
+  width: 279px;
+  height: 257px;
+  background-color: #ccc;
+  background-image: url(img/tema4.webp);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0;
+  margin: 10px;
+}
+.box5 {
+  width: 279px;
+  height: 257px;
+  background-color: #ccc;
+  background-image: url(img/tema5.webp);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0;
+  margin: 10px;
+}
+.box6 {
+  width: 279px;
+  height: 257px;
+  background-color: #ccc;
+  background-image: url(img/tema6.webp);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0;
+  margin: 10px;
+}
+.box:hover {
+  transform: scale(1.1); /* Slightly enlarge the box */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+.box2:hover {
+  transform: scale(1.1); /* Slightly enlarge the box */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+.box3:hover {
+  transform: scale(1.1); /* Slightly enlarge the box */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+.box4:hover {
+  transform: scale(1.1); /* Slightly enlarge the box */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+.box5:hover {
+  transform: scale(1.1); /* Slightly enlarge the box */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+.box6:hover {
+  transform: scale(1.1); /* Slightly enlarge the box */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 boxes per row */
+    padding: 0;
+    margin-top: 50px;
+  }
+
+  .box,
+  .box2,
+  .box3,
+  .box4,
+  .box5,
+  .box6 {
+    width: 200px; /* Adjust the box size for smaller screens */
+    height: 150px;
+  }
+
+  .grid-item p {
+    font-size: 0.8rem; /* Slightly reduce text size for better fit */
+  }
+
+  .box:hover {
+    transform: scale(1.1); /* Slightly enlarge the box */
+  }
+  .box2:hover {
+    transform: scale(1.1); /* Slightly enlarge the box */
+  }
+  .box3:hover {
+    transform: scale(1.1); /* Slightly enlarge the box */
+  }
+  .box4:hover {
+    transform: scale(1.1); /* Slightly enlarge the box */
+  }
+  .box5:hover {
+    transform: scale(1.1); /* Slightly enlarge the box */
+  }
+  .box6:hover {
+    transform: scale(1.1); /* Slightly enlarge the box */
+  }
+}
+
+/*  TEMA NAVIGATION */
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Aligns the navigation items to the right */
+  padding: 5px 10px; /* Reduced padding for a smaller appearance */
+}
+
+.nav-item {
+  position: relative;
+  padding: 5px 11px; /* Adjusted for better button size */
+  border: 1px solid #ff5055;
+  margin-left: 2.5px; /* Maintain proper spacing */
+  text-align: center;
+  font-family: "ivystyle-sans", sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  font-style: normal;
+  border-radius: 3px; /* Rounded corners for a modern look */
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+  z-index: 1; /* Ensure the text is above the hover effect */
+}
+
+.nav-item:hover {
+  background-color: #ffdede; /* Subtle change on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.nav-item.active {
+  background-color: #d0f3ff;
+  border-color: #33aaff;
+}
+
+@media (max-width: 800px) {
+  .nav-bar {
+    flex-wrap: wrap; /* Ensure the nav items wrap properly on smaller screens */
+    justify-content: flex-end; /* Keep items aligned to the right on mobile */
+  }
+}
+
+/* LINKS */
+.link {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1rem;
+  font-family: "ivystyle-sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.link:hover {
+  color: #ff5055;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* TEMA 1 */
+
+@media (width > 600px) {
+  .grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 boxes per row */
+    padding: 50px;
+    margin: 0;
+  }
+}
+
+.youtube {
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+
+/* TEMA 2 */
+
+.iphone {
+  width: 25%;
+}
+
+/* TEMA 3 */
+
+.grid-music {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px; /* Optional, to add spacing between images */
+  width: 100%;
+}
+
+/* Tema 4 */
+
+#start_btn {
+  position: relative;
+  width: 100px;
+  aspect-ratio: 2.7/1;
+  background-image: url(img/play_btn.svg);
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Normal size */
+  }
+  50% {
+    transform: scale(1.1); /* Slightly enlarged */
+  }
+  100% {
+    transform: scale(1); /* Back to normal size */
+  }
+}
+
+/* Tema 5 */
+
+.comedyzoo-video {
+  width: 100%;
+}
+
+/* Tema 6 */
+
+.grid-container-tema {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.grid-item-tema {
+  padding: 15px;
+  border: 1px solid #ff5555;
+}
+
+.grid-item-tema img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.tema6-tegning {
+  width: 50%;
+}
+
+@media (max-width: 800px) {
+  .grid-container-tema {
+    display: block;
+  }
+
+  .grid-item-tema {
+    margin-bottom: 20px;
+  }
+}
