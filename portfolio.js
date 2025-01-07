@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         element.classList.add("visible");
       }
 
-      // Remove 'visible' class if scrolled back to top
+      // Fjerner 'visible' class hvis (if) der er scrolled tilbage til toppen
       if (isAtTop) {
         element.classList.remove("visible");
       }
@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", handleScroll);
 
-  // Trigger the scroll handler on page load to animate elements already in view
   handleScroll();
 });
 let slideIndex = 0;
@@ -30,15 +29,11 @@ showSlides();
 function showSlides() {
   const slides = document.querySelectorAll(".mySlides");
 
-  // Hide all slides
   slides.forEach((slide) => (slide.style.display = "none"));
 
-  // Increment slide index
   slideIndex = (slideIndex + 1) % slides.length;
 
-  // Show the current slide
   slides[slideIndex].style.display = "block";
 
-  // Repeat every 2 seconds
   setTimeout(showSlides, 2000);
 }

@@ -23,10 +23,10 @@ body {
   }
   #tegning {
     position: absolute;
-    width: 300px;
+    width: 250px;
     aspect-ratio: 1/1;
-    top: 70px;
-    left: 170px;
+    top: 40px;
+    left: 180px;
     background-image: url("img/tegning.png");
     background-size: cover;
   }
@@ -44,18 +44,18 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url("img/forsidebaggrund.svg");
+    background-image: url("img/forsidebaggrund1.svg");
     background-repeat: no-repeat;
     top: 0;
     left: 0;
     background-position: center 0;
   }
   #tegning {
-    width: 35%;
+    width: 30%;
     aspect-ratio: 1/1;
     position: absolute;
-    top: -0.5%;
-    left: 45%;
+    top: 5%;
+    left: 53%;
     background-image: url("img/tegning.png");
     background-size: cover;
   }
@@ -93,7 +93,7 @@ body {
     background-image: url("img/ommig.svg");
     background-repeat: no-repeat;
     top: 0;
-    left: 65%;
+    left: 53%;
     background-position: center 0;
   }
   #ommig:hover {
@@ -112,9 +112,9 @@ header {
 
 header nav {
   display: flex;
-  justify-content: space-between; /* Space between logo and navigation */
-  align-items: center; /* Center items vertically */
-  padding: 10px 20px; /* Padding around the header content */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
 }
 
 header nav a {
@@ -123,14 +123,14 @@ header nav a {
 }
 
 .burger-menu {
-  display: none; /* Hide the burger menu by default */
+  display: none;
   font-size: 24px;
   cursor: pointer;
 }
 
 .header_nav ul {
   display: flex;
-  gap: 10px; /* Space between navigation items */
+  gap: 10px;
 }
 
 .header_nav ul li a {
@@ -140,10 +140,9 @@ header nav a {
   transition: background-color 0.3s ease;
 }
 
-/* Responsive Design for Smaller Screens */
 @media (max-width: 600px) {
   .burger-menu {
-    display: block; /* Show the burger menu */
+    display: block;
   }
 
   #burger-toggle {
@@ -153,9 +152,9 @@ header nav a {
   }
 
   .header_nav {
-    display: none; /* Hide the navigation by default */
+    display: none;
     position: absolute;
-    top: 6vh; /* Adjusted to appear below the header */
+    top: 6vh;
     right: 2%;
     background-color: #ff5055;
     flex-direction: column;
@@ -164,17 +163,17 @@ header nav a {
   }
 
   #burger-toggle:checked + .burger-menu + .header_nav {
-    display: flex; /* Show navigation when burger menu is toggled */
+    display: flex;
   }
 
   .header_nav ul {
-    flex-direction: column; /* Stack navigation items */
+    flex-direction: column;
 
     list-style: none;
   }
 
   .header_nav ul li a {
-    text-align: center; /* Center-align the text */
-    width: 100%; /* Full width for better usability */
+    text-align: center;
+    width: 100%;
   }
 }

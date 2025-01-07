@@ -11,8 +11,8 @@
   text-align: center;
   text-decoration: none;
   display: flex;
-  flex-direction: column; /* Ensures the box and image stack vertically */
-  align-items: center; /* Centers the content */
+  flex-direction: column;
+  align-items: center;
 }
 
 .grid-item p {
@@ -80,33 +80,33 @@
   margin: 10px;
 }
 .box:hover {
-  transform: scale(1.1); /* Slightly enlarge the box */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 .box2:hover {
-  transform: scale(1.1); /* Slightly enlarge the box */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 .box3:hover {
-  transform: scale(1.1); /* Slightly enlarge the box */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 .box4:hover {
-  transform: scale(1.1); /* Slightly enlarge the box */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 .box5:hover {
-  transform: scale(1.1); /* Slightly enlarge the box */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 .box6:hover {
-  transform: scale(1.1); /* Slightly enlarge the box */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 800px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 boxes per row */
+    grid-template-columns: repeat(2, 1fr);
     padding: 0;
     margin-top: 50px;
   }
@@ -117,31 +117,31 @@
   .box4,
   .box5,
   .box6 {
-    width: 200px; /* Adjust the box size for smaller screens */
+    width: 200px;
     height: 150px;
   }
 
   .grid-item p {
-    font-size: 0.8rem; /* Slightly reduce text size for better fit */
+    font-size: 0.8rem;
   }
 
   .box:hover {
-    transform: scale(1.1); /* Slightly enlarge the box */
+    transform: scale(1.1);
   }
   .box2:hover {
-    transform: scale(1.1); /* Slightly enlarge the box */
+    transform: scale(1.1);
   }
   .box3:hover {
-    transform: scale(1.1); /* Slightly enlarge the box */
+    transform: scale(1.1);
   }
   .box4:hover {
-    transform: scale(1.1); /* Slightly enlarge the box */
+    transform: scale(1.1);
   }
   .box5:hover {
-    transform: scale(1.1); /* Slightly enlarge the box */
+    transform: scale(1.1);
   }
   .box6:hover {
-    transform: scale(1.1); /* Slightly enlarge the box */
+    transform: scale(1.1);
   }
 }
 
@@ -150,21 +150,23 @@
 .nav-bar {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Aligns the navigation items to the right */
-  padding: 5px 10px; /* Reduced padding for a smaller appearance */
+  justify-content: flex-end;
+  padding: 5px 10px;
+  margin-bottom: -35px;
 }
 
 .nav-item {
   position: relative;
-  padding: 5px 11px; /* Adjusted for better button size */
+  padding: 5px 11px;
   border: 1px solid #ff5055;
-  margin-left: 2.5px; /* Maintain proper spacing */
+  margin-left: 2.5px;
+  margin-top: 70px;
   text-align: center;
   font-family: "ivystyle-sans", sans-serif;
   font-weight: 400;
   font-size: 0.8rem;
   font-style: normal;
-  border-radius: 3px; /* Rounded corners for a modern look */
+
   transition: all 0.3s ease;
   overflow: hidden;
 }
@@ -173,12 +175,12 @@
   text-decoration: none;
   color: #333;
   position: relative;
-  z-index: 1; /* Ensure the text is above the hover effect */
+  z-index: 1;
 }
 
 .nav-item:hover {
-  background-color: #ffdede; /* Subtle change on hover */
-  transform: scale(1.05); /* Slight zoom effect */
+  background-color: #ffdede;
+  transform: scale(1.05);
 }
 
 .nav-item.active {
@@ -188,8 +190,8 @@
 
 @media (max-width: 800px) {
   .nav-bar {
-    flex-wrap: wrap; /* Ensure the nav items wrap properly on smaller screens */
-    justify-content: flex-end; /* Keep items aligned to the right on mobile */
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 }
 
@@ -212,7 +214,7 @@
 @media (width > 600px) {
   .grid2 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 boxes per row */
+    grid-template-columns: repeat(2, 1fr);
     padding: 50px;
     margin: 0;
   }
@@ -234,7 +236,7 @@
 .grid-music {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px; /* Optional, to add spacing between images */
+  gap: 10px;
   width: 100%;
 }
 
@@ -249,13 +251,13 @@
 }
 @keyframes pulse {
   0% {
-    transform: scale(1); /* Normal size */
+    transform: scale(1);
   }
   50% {
-    transform: scale(1.1); /* Slightly enlarged */
+    transform: scale(1.1);
   }
   100% {
-    transform: scale(1); /* Back to normal size */
+    transform: scale(1);
   }
 }
 
@@ -283,10 +285,6 @@
   max-width: 100%;
   height: auto;
   display: block;
-}
-
-.tema6-tegning {
-  width: 50%;
 }
 
 @media (max-width: 800px) {
